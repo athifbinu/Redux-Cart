@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Components/Header/Header'
-import ProductList from './Components/ProductList/ProductList'
+import ProductList from './Components/ProductList/ProductList.jsx'
 
 
 const App = () => {
