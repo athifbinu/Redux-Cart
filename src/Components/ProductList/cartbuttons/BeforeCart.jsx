@@ -1,6 +1,6 @@
 import React from 'react'
 import "./CartButton.css"
-const BeforeCart = () => {
+const BeforeCart = ({addToCart}) => {
   return (
     <div className="before-cart">
          <button className="add-cart-button">
