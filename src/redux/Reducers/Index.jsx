@@ -1,9 +1,9 @@
-import { createStore } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
 
 
-import { productReducer } from "./ProductReducer";
+import {productReducer} from './ProductReducer'
 
-const reducers =createStore({
+const reducers =combineReducers({
     allProducts:productReducer,
 
 })
