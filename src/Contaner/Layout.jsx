@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Header from './Header'
-import Route from '../Routes/Route'
+import Route from '../Routes/Routers'
 const Layout = () => {
   return (
     <div>
