@@ -4,9 +4,19 @@ import {AiOutlineShoppingCart} from "react-icons/ai"
 import "../Styles/Header.css"
 
 import { Link } from 'react-router-dom'
+
+
+import { useSelector } from 'react-redux';
+
+
+
+
+
 const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const cartProducts=useSelector(state=>state.cart)
 
 
   const toggleNavbar = () => {
@@ -36,7 +46,7 @@ const Header = () => {
         <li className="navbar-item">
               <Link to="/cart" className='navbar-link'>
               <AiOutlineShoppingCart/>
-              
+              <span class="badge badge-light"></span>
               </Link>
           
         </li>
