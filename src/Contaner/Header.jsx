@@ -46,7 +46,7 @@ const Header = () => {
         <li className="navbar-item">
               <Link to="/cart" className='navbar-link'>
               <AiOutlineShoppingCart/>
-              <span class="badge badge-light"></span>
+              <span class="badge badge-light">{cartProducts.length}</span>
               </Link>
           
         </li>

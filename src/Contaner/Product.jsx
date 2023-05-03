@@ -5,22 +5,28 @@ import { useState } from 'react'
 
 import "../Styles/Product.css"
 
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 
 import {add} from "../redux/cartSlice"
+
+
+import  {getProducts} from "../redux/ProductSlice"
+
 
 
 const Product = () => {
 
      const dispatch=useDispatch()
 
-    const [products,getProduct]=useState([])
+     const {data:products} =useSelector(state=>state.Product)
 
-
+  
     useEffect(()=>{
-     fetch("https://fakestoreapi.com/products")
-        .then(data=>data.json()) //to get data in json format
-        .then(result=>getProduct(result))
+    // fetch("https://fakestoreapi.com/products")
+       // .then(data=>data.json()) //to get data in json format
+        //.then(result=>getProduct(result))
+
+        dispatch(getProducts())
     },[])
 
     console.log(products)
