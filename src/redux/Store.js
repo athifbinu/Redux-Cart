@@ -8,7 +8,7 @@ import ProductSlice from "./ProductSlice"
 const store =configureStore({
     reducer:{
         cart:cartSlice,
-        product:ProductSlice
+        products:ProductSlice
     }
 })
 

@@ -13,12 +13,11 @@ import {add} from "../redux/cartSlice"
 import  {getProducts} from "../redux/ProductSlice"
 
 
-
 const Product = () => {
 
      const dispatch=useDispatch()
 
-     const {data:products} =useSelector(state=>state.Product)
+     const {data:products} =useSelector(state=>state.products)
 
   
     useEffect(()=>{
@@ -39,25 +38,24 @@ const Product = () => {
     
      const card =products.map(product =>(
 
-          <div className=" col-md-3">
-
-        <div key={product.id} className="product-card">
+        <div className=" col-md-3">
+         <div key={product.id} className="product-card">
           <img src={product.image} alt="img" />
           <h3>{product.title}</h3>
           <p className='product-description'>{product.category}</p>
           <p className='product-price'>{product.price}</p>
           <button className='add-to-cart' onClick={()=>addtoCart(product)}>Add To Cart</button>
-        </div>
+          </div>
           </div>
 
 
      ))
   return (
-    <>
+  
        <div className="row">
            {card}
        </div>
-    </>
+  
   )
 }
 

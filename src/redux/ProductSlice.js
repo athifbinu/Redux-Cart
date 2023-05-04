@@ -9,7 +9,7 @@ const instalState={
 
 
 const ProductSlice =createSlice({
-    name:"cart",
+    name:"products",
     initialState:instalState,
     reducers:{
         fetchProducts(state,action){
