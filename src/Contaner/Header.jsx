@@ -16,12 +16,11 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
+
+
   const cartProducts=useSelector(state=>state.cart)
 
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
 
@@ -32,7 +31,7 @@ const Header = () => {
             Logo
            </Link>
 
-      <div className="navbar-toggle" onClick={toggleNavbar}>
+      <div className="navbar-toggle" >
         <span className="navbar-icon"></span>
         <span className="navbar-icon"></span>
         <span className="navbar-icon"></span>
@@ -44,7 +43,7 @@ const Header = () => {
            </Link>
         </li>
         <li className="navbar-item">
-              <Link to="/cart" className='navbar-link'>
+              <Link to="cart" className='navbar-link'>
               <AiOutlineShoppingCart/>
               <span class="badge badge-light">{cartProducts.length}</span>
               </Link>
